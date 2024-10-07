@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
+.btn {
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 14px;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    font-size: 15px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    
+
+}
+
+
+.nav-btn {
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 14px;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+    font-size: 15px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    
+
+}
+.main-body {
+    background-color: #eaeaea;
+    font-family: 'Brush Script MT', cursive;
+  
+}
+
+.border-control {
+    border-style: outset;
+    padding-bottom: 60px;
+
+}
+
+.input-style {
+    display: flex;
+    padding-top: 5px;
+}
+
+.header {
+    margin: 1em 0 0.5em 0;
+	color: #61316d;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 42px;
+	text-transform: uppercase;
+	text-shadow: 0 2px #eaeaea, 0 3px #777;
+
+  }
+  
+

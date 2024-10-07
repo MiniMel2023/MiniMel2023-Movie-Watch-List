@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+<body class="main-body">
+    <main>
+        <button class="nav-btn" type="submit" ><a href="/home">MOVIE WATCH LIST</a></button>
+        <button class="nav-btn" type="submit" ><a href="/history">HISTORY MOVIE LIST</a></button>
+
+        <h1 class="header">Add Movies To Watch List</h1>
+        <hr>
+        <form action="/add" method="POST">
+            <div>
+                <label class="input-style" for="name">Movie Name</label>
+                <input class="input-style" type="text" name="name" id="name">
+            </div>
+            <br>
+            <div>
+                <label class="input-style" for="link">Streaming link</label>
+                <input class="input-style" type="text" name="link" id="link">
+            </div>
+            <br>
+            <div>
+                <button class="btn" type="submit">Submit</button>
+            </div>
+        </form>
+       
+    </main>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body class="main-body">
+    <main >
+        <button class="nav-btn" type="submit" ><a href="/add">ADD MOVIE</a></button>
+        <button class="nav-btn" type="submit" ><a href="/home">MOVIE LIST</a></button>
+
+
+        <h1 class="header">History Watch List</h1>
+        <hr/>
+
+        <% if (movieList.length > 0) { %>
+            <% for (let movie of movieList) { %>
+            <div class="border-control">    
+                <header>
+                    <h3><%=movie.name%></h3>
+                </header>
+                <div>
+                    <a href="<%= movie.link.startsWith('http') ? movie.link : 'https://' + movie.link %>" target="_blank">
+                        <h4>STREAM IT HERE!</h4>
+                    </a>
+                </div>
+                <div>
+                    <form action="/home/<%= movie._id %>" method="POST">
+                        <button class="btn" type="submit" >REWATCH</button>
+                    </form>
+                    
+                    <form action="/delete/<%= movie._id %>" method="POST">
+                        <button class="btn" type="submit" >DELETE</button>
+                    </form>
+
+                    <input type="hidden" name="movieId" value="<%= movie._id %>">
+                </div>
+            </div>    
+            <% } %>
+        <% } else { %>
+            <h3>Nothing new for you here.....</h3>
+            <% } %>
+
+    </main>
+   
+</body>
+</html>

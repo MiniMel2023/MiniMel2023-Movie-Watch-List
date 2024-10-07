@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+<body class="main-body">
+    <main>
+        <button class="nav-btn" type="submit" ><a href="/history">History Movie List</a></button>
+        <button class="nav-btn" type="submit" ><a href="/home">Movie List</a></button>
+
+        <h1 class="header">Update Movie</h1>
+        <hr>
+        <div>
+            <form action="/update/<%= movie._id %>" method="POST">
+                <div>
+                    <label for="name">Movie Name</label>
+                    <input class="input-style" type="text" name="name" id="name" value="<%= movie.name %>">
+                </div>
+                <br>
+                <div>
+                    <label for="link">Streaming link</label>
+                    <input class="input-style" type="text" name="link" id="link" value="<%= movie.link %>">
+                </div>
+                <br>
+                <div>
+                    <button class="btn" type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+        
+       
+    </main>
+</body>
+</html>
