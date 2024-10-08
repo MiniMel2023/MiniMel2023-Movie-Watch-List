@@ -26,7 +26,6 @@
     "define-data-property": "^1.1.4",
     "depd": "^2.0.0",
     "destroy": "^1.2.0",
-    "dotenv": "^16.4.5",
     "ee-first": "^1.1.1",
     "ejs": "^3.1.10",
     "encodeurl": "^2.0.0",
@@ -104,7 +103,7 @@
     "start": "node app.js"
   },
   "engines": {
-    "node": "16.x"
+    "node": ">=14.x"
   },
   "author": "",
   "license": "ISC"
