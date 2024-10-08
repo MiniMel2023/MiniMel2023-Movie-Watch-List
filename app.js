@@ -3,6 +3,11 @@ const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+
+dotenv.config();
+
+const dbURI = process.env.MONGO_URI;
 
 const app = express();
 
@@ -21,9 +26,7 @@ app.use(homeRoutes);
 app.use(crudRoutes);
 
 mongoose
-  .connect(
-    "mongodb+srv://minimel:sF4HhJg3Y5AGuHiF@cluster0.rbj6q.mongodb.net/MovieList?retryWrites=true&w=majority&appName=Cluster0"
-  )
+  .connect(dbURI)
   .then(() => {
     app.listen(port);
     console.log("Connected!");
