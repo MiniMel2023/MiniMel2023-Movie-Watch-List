@@ -104,7 +104,7 @@
     "start": "node app.js"
   },
   "engines": {
-    "node": "16.x"
+    "node": ">=14.x"
   },
   "author": "",
   "license": "ISC"
