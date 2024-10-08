@@ -6,6 +6,8 @@ const mongoose = require("mongoose");
 
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 app.set("view engine", "ejs");
 app.set("views", "views");
 
@@ -23,7 +25,7 @@ mongoose
     "mongodb+srv://minimel:sF4HhJg3Y5AGuHiF@cluster0.rbj6q.mongodb.net/MovieList?retryWrites=true&w=majority&appName=Cluster0"
   )
   .then(() => {
-    app.listen(3000);
+    app.listen(port);
     console.log("Connected!");
   })
   .catch((err) => {
