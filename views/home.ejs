@@ -10,7 +10,7 @@
 <body class="main-body">
     <main>
         <button class="nav-btn" type="submit" ><a href="/history">HISTORY MOVIE LIST</a></button>
-        <button class="nav-btn" type="submit" ><a href="/add">ADD MOVIE</a></button>
+        <button class="nav-btn" type="submit" ><a href="/crud/add">ADD MOVIE</a></button>
        
         <h1 class="header">Movie Watch List</h1>
         <h2>What's New?</h2>
@@ -31,11 +31,11 @@
                             <button class="btn" type="submit" >WATCHED</button>
                         </form>
                     
-                        <form action="/update/<%= movie._id %>" method="GET">
+                        <form action="/crud/update/<%= movie._id %>" method="GET">
                             <button class="btn" type="submit" >UPDATE</button>
                         </form>
     
-                        <form action="/delete/<%= movie._id %>" method="POST">
+                        <form action="/crud/delete/<%= movie._id %>" method="POST">
                             <button class="btn" type="submit" >DELETE</button>
                         </form>
     

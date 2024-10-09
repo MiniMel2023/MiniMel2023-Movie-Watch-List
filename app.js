@@ -22,14 +22,11 @@ app.use(express.static(path.join(__dirname, "public")));
 const homeRoutes = require("./routes/home");
 const crudRoutes = require("./routes/crud");
 
-app.use(homeRoutes);
-app.use(crudRoutes);
+app.use("/", homeRoutes);
+app.use("/crud", crudRoutes);
 
 mongoose
-  .connect(dbURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(dbURI)
   .then(() => {
     app.listen(port);
     console.log("Connected!");

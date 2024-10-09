@@ -12,6 +12,6 @@ router.get("/update/:movieId", crudController.getUpdateMovie);
 
 router.post("/update/:movieId", crudController.postUpdateMovie);
 
-router.post("/delete/:movieId", crudController.deleteMovie);
+router.post("/delete/:movieId", crudController.postDeleteMovie);
 
 module.exports = router;
