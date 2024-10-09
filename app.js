@@ -26,7 +26,10 @@ app.use(homeRoutes);
 app.use(crudRoutes);
 
 mongoose
-  .connect(dbURI)
+  .connect(dbURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     app.listen(port);
     console.log("Connected!");
