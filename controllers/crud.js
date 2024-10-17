@@ -16,7 +16,7 @@ exports.postCreateMovie = (req, res, next) => {
   movie
     .save()
     .then((result) => {
-      res.redirect("/home");
+      res.redirect("/");
       console.log("Movie Added");
     })
     .catch((err) => {
@@ -49,7 +49,7 @@ exports.postUpdateMovie = (req, res, next) => {
       return movie.save();
     })
     .then(() => {
-      res.redirect("/home");
+      res.redirect("/");
       console.log("Movie Updated");
     })
     .catch((err) => {
@@ -57,11 +57,11 @@ exports.postUpdateMovie = (req, res, next) => {
     });
 };
 
-exports.deleteMovie = (req, res, next) => {
+exports.postDeleteMovie = (req, res, next) => {
   const movieId = req.params.movieId;
   Movie.findByIdAndDelete(movieId)
     .then(() => {
-      res.redirect("/home");
+      res.redirect("/");
       console.log("Movie Destroyed");
     })
     .catch((err) => {

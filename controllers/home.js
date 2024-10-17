@@ -41,7 +41,7 @@ exports.postWatched = (req, res, next) => {
   const movieId = req.params.movieId;
   Movie.findByIdAndUpdate(movieId, { isArchived: true })
     .then(() => {
-      res.redirect("/home");
+      res.redirect("/");
     })
     .catch((err) => {
       console.log(err);
