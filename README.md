@@ -1,0 +1,4 @@
+Made with MongoDB and Mongoose <br>
+You will need to configure a MongoDB connection on your end to view and run the website properly by replacing my connection string (hosting coming soon) <br>
+npm start to run <br>
+It's all about the CRUD, everything else (Style etc) was secondary
