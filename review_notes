@@ -1,0 +1,22 @@
+<<What I would do differently knowing what I know now / Where I think I could have improved it>>
+
+Main goal was to try and create a simple app that could execute the CRUD operations
+
+General
+Inverse some logic to check for the negative first instead
+Naming could have been cleaner - bit inconsitent
+-Attempted to group "doing" things together and put everything else on "home" as secondary (Home is technically the "R")
+
+Views
+Could have added "includes" to reuse some templates like nav and styling
+Could delve into better styling, templating, more intermediate CSS
+
+Routes
+Adding route filters in app.js to neaten up the route names - there were some issues during deployment which required a change
+
+Models
+Interesting learning about schemas, basically just Frankensteined one together from course examples
+
+Controllers
+Utilized Mongoose built in functions
+Basically retro-fitted from course material
