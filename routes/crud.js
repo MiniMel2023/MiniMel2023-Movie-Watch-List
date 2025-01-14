@@ -14,4 +14,12 @@ router.post("/update/:movieId", crudController.postUpdateMovie);
 
 router.post("/delete/:movieId", crudController.postDeleteMovie);
 
+router.get("/", crudController.getHome);
+
+router.get("/history", crudController.getHistory);
+
+router.post("/history/:movieId", crudController.postHistory);
+
+router.post("/watched/:movieId", crudController.postWatched);
+
 module.exports = router;
