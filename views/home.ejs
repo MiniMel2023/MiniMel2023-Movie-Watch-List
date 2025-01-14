@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= pageTitle %></title>
-    <link rel="stylesheet" href="/css/main.css">
+<%- include("includes/head.ejs") %>
+
 </head>
 
 <body class="main-body">
+
+    <%- include("includes/nav.ejs") %>
+
     <main>
-        <button class="nav-btn" type="submit" ><a href="/history">HISTORY MOVIE LIST</a></button>
-        <button class="nav-btn" type="submit" ><a href="/add">ADD MOVIE</a></button>
-       
+        
         <h1 class="header">Movie Watch List</h1>
         <h2>What's New?</h2>
         <hr/>
