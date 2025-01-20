@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= pageTitle %></title>
-    <link rel="stylesheet" href="/css/main.css">
+<%- include("includes/head.ejs") %>
 
 </head>
 <body class="main-body">
-    <main>
-        <button class="nav-btn" type="submit" ><a href="/">MOVIE WATCH LIST</a></button>
-        <button class="nav-btn" type="submit" ><a href="/history">HISTORY MOVIE LIST</a></button>
 
+    <%- include("includes/nav.ejs") %>
+    
+    <main>
         <h1 class="header">Add Movies To Watch List</h1>
         <hr>
         <form action="/add" method="POST">
