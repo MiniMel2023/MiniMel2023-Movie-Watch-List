@@ -1,4 +1,5 @@
 const Movie = require("../models/movie");
+const logger = require("../utils/logger");
 
 exports.getCreateMovie = (req, res, next) => {
   res.render("add", {
@@ -17,10 +18,10 @@ exports.postCreateMovie = (req, res, next) => {
     .save()
     .then((result) => {
       res.redirect("/");
-      console.log("Movie Added");
+      logger.info("Movie Added");
     })
     .catch((err) => {
-      console.log(err);
+      logger.error(" Unable to add new movie: ", err);
     });
 };
 
@@ -34,7 +35,7 @@ exports.getUpdateMovie = (req, res, next) => {
       });
     })
     .catch((err) => {
-      console.log(err);
+      logger.error(" Unable to get update movie page: ", err);
     });
 };
 
@@ -50,10 +51,10 @@ exports.postUpdateMovie = (req, res, next) => {
     })
     .then(() => {
       res.redirect("/");
-      console.log("Movie Updated");
+      logger.info("Movie Updated");
     })
     .catch((err) => {
-      console.log(err);
+      logger.error(" Unable to update movie: ", err);
     });
 };
 
@@ -62,10 +63,10 @@ exports.postDeleteMovie = (req, res, next) => {
   Movie.findByIdAndDelete(movieId)
     .then(() => {
       res.redirect("/");
-      console.log("Movie Destroyed");
+      logger.info("Movie Destroyed");
     })
     .catch((err) => {
-      console.log(err);
+      logger.error(" Unable to delete movie: ", err);
     });
 };
 
@@ -78,7 +79,7 @@ exports.getHome = (req, res, next) => {
       });
     })
     .catch((err) => {
-      console.log(err);
+      logger.error(" Unable to get Home page: ", err);
     });
 };
 
@@ -91,7 +92,7 @@ exports.getHistory = (req, res, next) => {
       });
     })
     .catch((err) => {
-      console.log(err);
+      logger.error(" Unable to get History page: ", err);
     });
 };
 
@@ -100,9 +101,10 @@ exports.postHistory = (req, res, next) => {
   Movie.findByIdAndUpdate(movieId, { isArchived: false })
     .then(() => {
       res.redirect("/history");
+      logger.info("Movie moved to Home page");
     })
     .catch((err) => {
-      console.log(err);
+      logger.error(" Unable to move movie to Home Page: ", err);
     });
 };
 
@@ -111,8 +113,9 @@ exports.postWatched = (req, res, next) => {
   Movie.findByIdAndUpdate(movieId, { isArchived: true })
     .then(() => {
       res.redirect("/");
+      logger.info("Movie moved to History page");
     })
     .catch((err) => {
-      console.log(err);
+      logger.error(" Unable to move movie to History page: ", err);
     });
 };
